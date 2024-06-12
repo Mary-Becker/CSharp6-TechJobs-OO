@@ -51,7 +51,8 @@ namespace TechJobs.Tests
         public void TestToStringStartsAndEndsWithNewLine()
         {
             string jobString = job3.ToString();
-            Assert.IsTrue(jobString.StartsWith("\n") && jobString.EndsWith("\n"));
+            Assert.IsTrue(jobString.StartsWith("\n"), "ToString() starts with a new line.");
+            Assert.IsTrue(jobString.EndsWith("\n"), "ToString() ends with a new line.");
         }
 
         [TestMethod]
