@@ -32,7 +32,7 @@ namespace TechJobs.Tests
         }
 
         [TestMethod]
-        public void ConstructorSetsAllField()
+        public void TestJobConstructorSetsAllField()
         {
             Assert.AreEqual("Product tester", job3.Name, "Name property not set correctly.");
             Assert.AreEqual("ACME", job3.EmployerName.Value, "EmployerName property not set correctly.");
@@ -56,19 +56,20 @@ namespace TechJobs.Tests
         }
 
         [TestMethod]
-        public void TestToStringContainsCorrectLabelsAndData()
-        {
-            string jobString = job3.ToString();
-            string expectedString = $"\nID: {job3.Id}\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n";
-            Assert.AreEqual(expectedString, jobString);
-        }
+public void TestToStringContainsCorrectLabelsAndData()
+{
+    string jobString = job3.ToString();
+    string expectedString = $"\nID: {job3.Id}\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n";
+    Assert.AreEqual(expectedString, jobString);
+}
+
 
         [TestMethod]
         public void TestToStringHandlesEmptyField()
         {
             Job jobWithEmptyField = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
             string jobString = jobWithEmptyField.ToString();
-            string expectedString = $"\nId: {jobWithEmptyField.Id}\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available\n";
+            string expectedString = $"\nID: {jobWithEmptyField.Id}\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available\n";
             Assert.AreEqual(expectedString, jobString);
         }
     }

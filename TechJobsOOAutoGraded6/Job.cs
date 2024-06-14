@@ -35,7 +35,7 @@ namespace TechJobsOOAutoGraded6
 
         // TODO: Task 3: Generate Equals() and GetHashCode() methods.  
 
-        public override bool Equals(object? obj)
+        public override bool Equals(object obj)
         {
             return obj is Job job &&
             Id == job.Id;
@@ -54,15 +54,15 @@ namespace TechJobsOOAutoGraded6
             string name = string.IsNullOrEmpty(Name) ? "Data not available" : Name;
             string employer = EmployerName == null || string.IsNullOrEmpty(EmployerName.Value) ? "Data not available" : EmployerName.Value;
             string location = EmployerLocation == null || string.IsNullOrEmpty(EmployerLocation.Value) ? "Data not available" : EmployerLocation.Value;
-            string type = JobType == null || string.IsNullOrEmpty(JobType.Value) ? "Data not available" : JobType.Value;
+            string jobtype = JobType == null || string.IsNullOrEmpty(JobType.Value) ? "Data not available" : JobType.Value;
             string competency = JobCoreCompetency == null || string.IsNullOrEmpty(JobCoreCompetency.Value) ? "Data not available" : JobCoreCompetency.Value;
 
-            return $"ID: {Id}\n"+
+            return $"\nID: {Id}\n"+
             $"Name: {name}\n"+
             $"Employer: {employer}\n"+
             $"Location: {location}\n"+
-            $"Position Type: {type}\n"+
-            $"Core Competency: {competency}";
+            $"Position Type: {jobtype}\n"+
+            $"Core Competency: {competency}\n";
         }
     }
 }
