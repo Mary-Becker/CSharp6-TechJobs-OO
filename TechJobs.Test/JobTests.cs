@@ -32,7 +32,7 @@ namespace TechJobs.Tests
         }
 
         [TestMethod]
-        public void TestJobConstructorSetsAllField()
+        public void TestJobConstructorSetsAllFields()
         {
             Assert.AreEqual("Product tester", job3.Name, "Name property not set correctly.");
             Assert.AreEqual("ACME", job3.EmployerName.Value, "EmployerName property not set correctly.");

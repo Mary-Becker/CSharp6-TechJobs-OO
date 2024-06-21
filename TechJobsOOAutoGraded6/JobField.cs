@@ -15,9 +15,7 @@ namespace TechJobsOOAutoGraded6
         public JobField()
         {
             Id = nextId;
-            Console.WriteLine($"Assigning Id {Id} to new job field, nextId was {nextId}");
             nextId++;
-            Console.WriteLine($"nextId incremented to {nextId}");
         }
 
         // Constructor that takes value parameter
