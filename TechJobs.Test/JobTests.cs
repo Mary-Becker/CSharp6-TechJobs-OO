@@ -56,12 +56,12 @@ namespace TechJobs.Tests
         }
 
         [TestMethod]
-public void TestToStringContainsCorrectLabelsAndData()
-{
-    string jobString = job3.ToString();
-    string expectedString = $"\nID: {job3.Id}\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n";
-    Assert.AreEqual(expectedString, jobString);
-}
+        public void TestToStringContainsCorrectLabelsAndData()
+        {
+        string jobString = job3.ToString();
+        string expectedString = $"\nID: {job3.Id}\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n";
+        Assert.AreEqual(expectedString, jobString);
+        }
 
 
         [TestMethod]
