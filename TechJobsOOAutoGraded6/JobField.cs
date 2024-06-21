@@ -3,12 +3,12 @@ namespace TechJobsOOAutoGraded6
     public abstract class JobField
     {
         public int Id { get; }
-        private static int nextId = 2;
+        private static int nextId = 1;
         public string Value { get; set; }
 
         static JobField()
         {
-            nextId = 2;
+            nextId = 1;
         }
 
         // Parameterless constructor to initialize Id field

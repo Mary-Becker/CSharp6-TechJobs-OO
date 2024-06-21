@@ -57,12 +57,13 @@ namespace TechJobsOOAutoGraded6
             string jobtype = JobType == null || string.IsNullOrEmpty(JobType.Value) ? "Data not available" : JobType.Value;
             string competency = JobCoreCompetency == null || string.IsNullOrEmpty(JobCoreCompetency.Value) ? "Data not available" : JobCoreCompetency.Value;
 
-            return $"\nID: {Id}\n"+
-            $"Name: {name}\n"+
-            $"Employer: {employer}\n"+
-            $"Location: {location}\n"+
-            $"Position Type: {jobtype}\n"+
-            $"Core Competency: {competency}\n";
+            return $"{Environment.NewLine}"+
+            $"ID: {Id}{Environment.NewLine}"+
+            $"Name: {name}{Environment.NewLine}"+
+            $"Employer: {employer}{Environment.NewLine}"+
+            $"Location: {location}{Environment.NewLine}"+
+            $"Position Type: {jobtype}{Environment.NewLine}"+
+            $"Core Competency: {competency}{Environment.NewLine}";
         }
     }
 }
